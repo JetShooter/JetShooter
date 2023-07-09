@@ -1,0 +1,14 @@
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.csproj.AssemblyReference.cache
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.csproj.SuggestedBindingRedirects.cache
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.Form1.resources
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.GameForm.resources
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.Properties.Resources.resources
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.csproj.GenerateResource.cache
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.csproj.CoreCompileInputs.cache
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\bin\Debug\JetShooter.exe.config
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\bin\Debug\JetShooter.exe
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\bin\Debug\JetShooter.pdb
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.exe
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.pdb
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.GameOver.resources
+C:\Users\Petar\Desktop\VP Project\JetShooter\JetShooter\obj\Debug\JetShooter.EasyMediumHigh.resources
