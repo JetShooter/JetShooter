@@ -39,14 +39,14 @@ namespace JetShooter
 
         private void EasyMediumHigh_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Hardness == -1)
+            /*if (Hardness == -1)
             {
                 Hardness = 1;
                 this.Close();
             }else
-            {
+            {*/
                 this.Close();
-            }
+            //}
         }
 
         private void EasyMediumHigh_Resize(object sender, EventArgs e)

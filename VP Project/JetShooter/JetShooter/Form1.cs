@@ -51,6 +51,10 @@ namespace JetShooter
             EasyMediumHigh form = new EasyMediumHigh();
             form.ShowDialog();
             Hardness = form.Hardness;
+            if (Hardness == -1)
+            {
+                this.Close();
+            }
 
             switch (random.Next(0, 5))
             {

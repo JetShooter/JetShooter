@@ -112,7 +112,8 @@ namespace JetShooter
             catch (Exception ex)
             {
                 // Handle the exception if the image loading fails.
-                MessageBox.Show("Error loading the image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Error loading the image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
             this.Controls.Add(picture);
         }
@@ -291,8 +292,11 @@ namespace JetShooter
                     this.Hide();
                     Form1 form1 = new Form1();
                     form1.ShowDialog();
-                    GameForm form2 = new GameForm(form1.sizeSkin, "", scene.highScore, form1.Hardness);
-                    form2.ShowDialog();
+                    GameForm form2 = new GameForm(form1.sizeSkin, form1.choosenSkin, scene.highScore, form1.Hardness);
+                    if (!form2.IsDisposed)
+                    {
+                        form2.ShowDialog();
+                    }
                 }
                 else
                 {
