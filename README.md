@@ -1,36 +1,38 @@
 # JetShooter
-## Изработиле: Петар Младеновски 211264 и Филип Петковски 211267
-### Објаснување на играта
-Играта се состои од еден авион, на кој може да се избира скин, кој е потребно да уништува метеори кои се движат со одредена брзина во зависност од левелот на играта. Секој метеор се уништува ако барем еден куршум го погоди. На почетокот се избира скин за авионот па потоа се избира јачина на играта (easy, medium, hard). Секој левел се состои од одреден број на метеори што треба да се уништат за да не се изгуби играта. Секој играч има 5 животи кои можат да се изгубат ако метеорот ја помине долната страна на екранот или се удри во авионот. При уништување на метеор се добива 1 поен. По уништување на сите метеори во дадениот левел се појавува главниот метеор (boss) со што е потребно повеќе време за да се уништи. По уништување на главниот метеор се добиваат дополнителни 20 поени и се оди кон следно ниво. Со секое наредно ниво бројот и движењето на метеорите е се поголем. На крајот се зачувува најголемиот скор и се овозможува на играчите да ја рестартираат играта со истиот скин, да почнат нова игра или да ја исклучат апликацијата. Целта не играта е да се постигне што поголем highscore.
+## Developed by: Petar Mladenovski 211264 and Filip Petkovski 211267
+### Game Explanation
+The game consists of a plane, which can be customized with a skin, tasked with destroying meteors moving at a certain speed depending on the game's level. Each meteor is destroyed if at least one bullet hits it. At the beginning, a skin for the plane is chosen, followed by selecting the game difficulty (easy, medium, hard). Each level consists of a certain number of meteors that need to be destroyed to avoid losing the game. Each player has 5 lives, which can be lost if a meteor passes the bottom of the screen or collides with the plane. Destroying a meteor earns 1 point. After destroying all meteors in a level, the main meteor (boss) appears, requiring more time to destroy. Destroying the main meteor earns an additional 20 points and advances to the next level. With each subsequent level, the number and movement of meteors increase. At the end, the highest score is saved, allowing players to restart the game with the same skin, start a new game, or exit the application. The goal of the game is to achieve the highest possible high score.
 
-### Да се опише решението на проблемот
-Играта се состои од класа за играчот (playerCLass) во која се зачувуваат јачината на авионот, локацијата, листа од класата на куршуми (Bullets) како и некои методи за исцртување на авионот, движење на авионот итн.
-Потоа постои класа за куршуми (Bullets) во која се зачувуваат локацијата на куршумот како и некои методи за исцртување, движење итн.
-Kласа за метеор (Meteor) во која се зачувуваат локацијата на метеорот, левел како и некои методи за исцртување, движење итн.
-Kласа за главниот метеор (MeteorBoss) во која се зачувуваат локацијата на метеорот, здравје, левел како и некои методи за исцртување, движење итн.
-Како и класата сцена (Scene) во која се зачувуваат листа од класата метеори, објект од класата на играчот, објект од класата на главниот метеор како и некои методи за исцртување, движење на авионот, движење на метеорите, како и нивно бришење.
+### Description of the Problem Solution
 
-### Опишување на барем една функција или класа од изворниот код на проектот
-Класата сцена:
-Во класата се чува листа од објекти од класата метеор, освоени поени, најголем скор, објект од класата играч, објект од класата главен метеор, ширина на формата, висина на формата и јачина на играта. 
-Во конструкторот се праќаат висината, ширината и главниот скор. А внатре се иницијализира објект од класата играч.
-Постои метода за додавање на метеор во листата на метеори, метода за исцртување на играчот, метеорите и главниот метеор, метода за движење на играчот со што се прави нов Point со промена на Y кординатата, метода за пукање на куршумите која повика метода од класата играч, метода за движење на куршумите во која се повикува метода од класата играч, метода за движење на метеорите во која со for циклус се повикува метода од класата метеор за секој метеор во листата, метода која враќа дали куршумот има погодено метеор, метода која враќа дали куршумот има погодено главен метеор, метода која проверува дали метеорот искочил од својата граница или дали е погоден од куршум, метода која проверува дали куршумот ја поминал својата граница или погодил во некоја мета, метода за додавање на главен метеор и метода за движење на главниот метеор кој повикува друга метода од класата главен метеор.
+The game consists of a player class (PlayerClass) storing the plane's strength, location, a list of bullet objects (Bullets class), and some methods for drawing the plane, moving the plane, etc. 
+Then there's a class for bullets (Bullets) storing the bullet's location and some methods for drawing, moving, etc. 
+A class for meteors (Meteor) stores the meteor's location, level, and some methods for drawing, moving, etc. 
+A class for the main meteor (MeteorBoss) stores the main meteor's location, health, level, and some methods for drawing, moving, etc. 
+Finally, there's a scene class (Scene) storing a list of meteor objects, earned points, highest score, player object, main meteor object, as well as some methods for drawing, moving the plane, moving meteors, and deleting them.
 
-### Screenshots од изгледот на апликацијата/играта и кратко упатство како се користи/игра
+### Description of at least one function or class from the source code of the project
+
+The Scene Class:
+This class holds a list of objects from the meteor class, earned points, highest score, a player object, a main meteor object, the width of the form, the height of the form, and the game's difficulty.
+In the constructor, the height, width, and highest score are passed. Inside, an object of the player class is initialized.
+There is a method for adding a meteor to the meteor list, a method for drawing the player, meteors, and the main meteor, a method for moving the player by creating a new Point with a change in the Y coordinate, a method for shooting the bullets which invokes a method from the player class, a method for moving the bullets which calls a method from the player class, a method for moving the meteors which iterates through the list and calls a method from the meteor class for each meteor in the list, a method that returns whether the bullet hit a meteor, a method that returns whether the bullet hit the main meteor, a method that checks if the meteor has crossed its boundary or if it has been hit by a bullet, a method that checks if the bullet has crossed its boundary or hit a meteor, a method for adding the main meteor, and a method for moving the main meteor which calls another method from the main meteor class.
+
+### Screenshots of the Application/Game Interface and Brief Instructions on How to Use/Play
 
 ![image](https://github.com/JetShooter/JetShooter/assets/132352865/4bfac75e-e151-43d0-8a7c-39794f8cfeb5)
 
-Со притискање на копчето PLAY се отвара друга форма за избирање на јачината на играта.
+By pressing the PLAY button, another form opens to select the game difficulty.
 ![image](https://github.com/JetShooter/JetShooter/assets/132352865/012e5341-b8eb-42fb-a66f-a44bbc1b9f73)
 
-По избирање на јачината се отвара форма за избирање на скин за авионот.
+After selecting the difficulty, a form for selecting a plane skin opens.
 ![image](https://github.com/JetShooter/JetShooter/assets/132352865/29949bf3-d03d-4f4c-9112-32760ddb0bcb)
 
-По избирање на скин се почнува со играта. Со движење на глувчето авионот се поместува само лево и десно. Со притискање на лев клик се пука. Од горната страна на формата излегуваат метеорите кои треба да се уништат исто така и главниот метеор. Во долниот дел на формата има статус на левел, останати животи и број на поени.
+Upon selecting the skin, the game starts. The plane moves left and right only by moving the mouse. Pressing the left click shoots. Meteors and the main meteor appear from the top of the form, needing to be destroyed. At the bottom of the form, there's a level status, remaining lives, and points.
 ![image](https://github.com/JetShooter/JetShooter/assets/132352865/7e23f0da-0cce-4539-9d60-a92b1241f29a)
 ![image](https://github.com/JetShooter/JetShooter/assets/132352865/6afa6ec5-f3e2-4a1f-976c-646945b753fa)
 
-При губење на сите животи се отвара нова форма во која може да се избере рестарт, нова игра или да се исклучи играта. 
+Upon losing all lives, a new form opens where you can choose to restart, start a new game, or exit the game.
 ![image](https://github.com/JetShooter/JetShooter/assets/132352865/2d5f77b5-3435-4a7a-9350-beb3c8e6e73c)
 
 
